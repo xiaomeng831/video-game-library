@@ -1,0 +1,26 @@
+<div *ngIf="isLoading" class="spinner">
+  <mat-spinner></mat-spinner>
+</div>
+
+<div *ngIf="!isLoading" class="details">
+  <ng-container *ngIf="game">
+    <div class="game-banner">
+      <img class="game-banner-img" src="{{ game.background_image }}" alt="background image" />
+    </div>
+    <div class="game-content">
+      <div class="details-wrapper">
+        <div class="game-header">
+          <h1 class="game-header-title">{{ game.name }}</h1>
+          <h2 class="game-header-release-date">
+            Release: {{ game.released | date }}
+          </h2>
+          <p class="game-header-genres">
+            <span *ngFor="let genre of game.genres; let last = last">{{ genre.name }}<span *ngIf="!last">,
+              </span></span>
+          </p>
+        </div>
+        <app-detail-tab [game]="game"></app-detail-tab>
+      </div>
+    </div>
+  </ng-container>
+</div>
