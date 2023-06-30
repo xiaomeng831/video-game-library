@@ -20,7 +20,6 @@ export class DetailsComponent {
       this.gameId = params['id'];
       this.getGameDetails(this.gameId);
     });
-    console.log(this.isLoading);
   }
 
   getGameDetails(id: string) {
