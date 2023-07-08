@@ -1,5 +1,6 @@
 ## Introduction
-video-game-library is an Angular web app built with TypScript, HTML, SCSS and Angular.
+video-game-library is an Angular web app built with TypScript, HTML, SCSS and Angular. <br/>
+Demo Link: https://video-game-library-vercel.vercel.app/
 ## Usage
 Display information of some video games by calling rawg-api(https://rawg.io/apidocs). <br/>
 Search a video game and check out its details.
